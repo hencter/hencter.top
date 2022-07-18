@@ -1,9 +1,0 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: #242424;
-    color: var(--primary);
-    --primary: wheat;
-    --primary-background: rgba(36, 36, 36, 0.5);
-    --accent: deepskyblue;
-  }
-}

@@ -1,0 +1,22 @@
+:root {
+  --primary: wheat;
+  --primary-background: white;
+  --accent: rebeccapurple;
+  --link: deeppink;
+  --shadow: darkgrey;
+  --border-color: darkgray;
+  --code-background: darkkhaki;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #242424;
+    color: var(--primary);
+    --primary: wheat;
+    --primary-background: #242424;
+    --accent: deepskyblue;
+    --shadow: black;
+    --border-color: darkkhaki;
+    /* --code-background: ; */
+  }
+}

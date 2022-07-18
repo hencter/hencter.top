@@ -1,0 +1,8 @@
+{{ if or (gt .WordCount 400 ) (.Params.toc) }}
+<aside class="toc">
+<details open>
+  <summary>目录</summary>
+  {{.TableOfContents}}
+</details>
+</aside>
+{{ end }}

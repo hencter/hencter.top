@@ -1,20 +1,60 @@
-table {
-  table-layout: auto;
-width: 100%;  
+em,
+strong {
+  color: var(--accent);
 }
 
-p img {
+table {
+  table-layout: auto;
   width: 100%;
-  border-radius: 5px;
+}
+
+thead {
+  background-color: #272822;
+  color: #fff;
+}
+
+th {
+  border-top: 1px solid var(--border-color);
+  /* border-bottom: 2px solid var(--accent); */
+}
+
+td {
+  border: 1px solid var(--border-color);
+  margin: 0;
+}
+
+article > p > code {
+  background: var(--code-background);
+  border: 1px solid var(--code-color);
+  color: var(--accent);
 }
 
 .highlight > pre {
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow: scroll;
   padding: 1em;
   border-radius: 5px;
 }
 
-strong {
-  color: var(--accent);
+article aside.toc {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding-block-start: 11px;
+  padding-block-end: 12px;
+  padding-inline-start: 15px;
+  padding-inline-end: 15px;
+}
+
+@media screen and (min-width: 959px){  
+  article aside.toc {
+    position: relative;
+    float: right;
+    width: 192px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-inline-start: 15px;
+    padding-block-start: 11px;
+    padding-block-end: 12px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
 }

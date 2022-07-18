@@ -7,7 +7,7 @@ languageCode = 'zh'
 defaultContentLanguage = 'zh'
 hasCJKLanguage = true
 
-paginate = 10
+# paginate = 10
 
 #  Creative Commons
 ## 普通图标

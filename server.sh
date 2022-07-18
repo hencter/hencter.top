@@ -2,7 +2,7 @@
 hugo -D
 hugo server -D \
             -w \
-            --debug \
+            # --debug \
             --noBuildLock \
             --disableFastRender \
             --printMemoryUsage \
