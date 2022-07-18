@@ -1,0 +1,8 @@
+<h3>近来</h3>
+{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
+<dl>
+  <dt>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </dt>
+</dl>
+{{ end -}}

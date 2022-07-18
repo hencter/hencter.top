@@ -1,0 +1,6 @@
+{{ with .Site.Taxonomies.categories }}
+<h3>类别</h3>
+{{ range .Site.Taxonomies.categories -}}
+<a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+{{ end -}}
+{{ end }}

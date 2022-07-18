@@ -1,0 +1,2 @@
+# Config section permalinks
+post = '/:year/:month/:day/:slug'

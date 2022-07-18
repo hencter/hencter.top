@@ -1,0 +1,16 @@
+p > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.highlight > pre {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+
+strong {
+  color: var(--accent);
+}

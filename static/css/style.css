@@ -1,0 +1,90 @@
+:root {
+  --max-width: 1024px;
+  --opacity: 0.95;
+  --primary: wheat;
+  --primary-background: rgba(255, 255, 255, 0.3);
+  --accent: rebeccapurple;
+  --link: deeppink;
+}
+
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-background);
+  backdrop-filter: blur(10em);
+  box-shadow: 2px 2px 10px 1px darkgrey;
+  opacity: var(--opacity);
+}
+
+body > header section {
+  position: relative;
+  height: 3em;
+  max-width: var(--max-width);
+  margin: auto;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  line-height: 0;
+}
+
+section > nav {
+  display: flex;
+  align-items: center;
+}
+
+nav > a {
+  margin: 0 0.5em;
+}
+
+body > main {
+  max-width: var(--max-width);
+  margin: 8em auto 0 auto;
+}
+
+main > section {
+  flex: 6;
+}
+
+main > aside {
+  flex: 4;
+  position: sticky;
+  top: 8em;
+  height: 100%;
+  padding: 0 1em;
+  overflow: auto;
+  /* display: none; */
+}
+
+body > footer {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+.active {
+  color: red;
+}
+
+#TableOfContents ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body > main {
+    display: flex;
+  }
+  main > section {
+    min-width: 720px;
+  }
+}

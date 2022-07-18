@@ -1,0 +1,20 @@
+{
+  "Site": {
+    "BaseURL": "{{.Site.BaseURL}}",
+    "Copyright": "{{.Site.Copyright}}",
+    "BuildDrafts": "{{.Site.BuildDrafts}}",
+    "DisqusShortname": "{{.Site.DisqusShortname}}",
+    "GoogleAnalytics": "{{.Site.GoogleAnalytics}}",
+    "Language" : {
+      "Self" : "{{.Site.Language}}",
+      "Lang" : "{{.Site.Language.Lang}}",
+      "LanguageName" : "{{.Site.Language.LanguageName}}",
+      "Weight" : "{{.Site.Language.Weight}}"
+    },
+    
+    "IsServer": {{.Site.IsServer}},
+    "IsMultiLingual": {{.Site.IsMultiLingual}},
+
+    "Home": {{.Site.Home.Render "page"}}
+  }
+}
