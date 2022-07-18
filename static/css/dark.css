@@ -3,7 +3,6 @@
     background-color: #242424;
     color: var(--primary);
     --primary: wheat;
-    --opacity: 0.9;
     --primary-background: rgba(36, 36, 36, 0.5);
     --accent: deepskyblue;
   }
