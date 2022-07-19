@@ -156,6 +156,14 @@ body > footer {
   border-top: 1px solid var(--border);
 }
 
+
+aside {
+  width: 100%;
+  float: none;
+  margin-left: 0;
+}
+
+
 /* Format headers */
 h1 {
   font-size: 3rem;
@@ -281,12 +289,6 @@ progress {
   margin-bottom: 1rem;
 }
 
-aside {
-  font-size: 1rem;
-  width: 40%;
-  margin-left: 15px;
-  float: right;
-}
 
 article,
 fieldset {
@@ -598,11 +600,13 @@ progress:indeterminate::-moz-progress-bar {
     cursor: pointer;
   }
 
-  aside {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-  }
+
+aside {
+  font-size: 1rem;
+  width: 40%;
+  margin-left: 15px;
+  float: right;
+}
 
   /* Reduce header size on 960px width */
 
