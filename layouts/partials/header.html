@@ -1,13 +1,19 @@
+{{ $avatar := resources.Get "images/avatar.jpg" }}
 <header>
-  <section>
-    <nav>
-      <a href="{{ .Site.BaseURL }}">{{.Site.Title}}</a>
-    </nav>
-    <nav>
-      {{ partial "menu.html" . }}
-      {{/*  <a href="#" target="_blank">硬连接 1</a>  */}}
-      {{/*  <a href="#" target="_blank">硬链接 2</a>  */}}
-      {{/*  <input type="text" name="search">  */}}
-    </nav>
-  </section>
+  <nav>
+    <a href="{{ .Site.BaseURL }}"><img src="{{ $avatar.RelPermalink }}"></a>
+    <ul>
+      {{ with .Site.Menus.main -}}
+      {{ range . -}}
+      <li>
+        <a href="{{ .URL | relURL }}">{{ .Title }}</a>
+      </li>
+      {{ end -}}
+      {{ end -}}
+    </ul>
+    {{/* <a href="#" target="_blank">硬连接 1</a> */}}
+    {{/* <a href="#" target="_blank">硬链接 2</a> */}}
+    {{/* <input type="text" name="search"> */}}
+  </nav>
+  {{/* <p>{{.Description}}</p> */}}
 </header>

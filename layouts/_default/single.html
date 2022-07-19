@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="toc">
+<article>
   <header>
     <h1>
       {{.Title}}
@@ -7,5 +7,7 @@
     {{ partial "toc.html" . }}
   </header>
   {{.Content}}
+  {{ partial "recently.html" . }}
+  {{ partial "related.html" . }}
 </article>
 {{ end }}

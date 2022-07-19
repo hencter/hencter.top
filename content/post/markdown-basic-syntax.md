@@ -48,44 +48,124 @@ Alt-H2
 
 通过将文本设置为粗体或斜体来强调其重要性
 
-```md
-强调，又名斜体，e.g. 带 *星号* 或 _下划线_。
+```markdown
+强调，又名斜体，带 *星号* 或 _下划线_。
 
-加粗强调, 又名加粗, e.g. **星号** or __下划线__.
+加粗强调, 又名加粗, **星号** or _下划线_。
 
-Combined emphasis with **asterisks and _underscores_**.
+加粗倾斜强调 **星号 and _下划线_**。
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+使用两个波浪号 `~` 删除， ~~划掉~~。
+```
+
+强调，又名斜体，带 *星号* 或 *下划线*。
+
+加粗强调, 又名加粗, **星号** or *下划线*。
+
+加粗倾斜强调 **星号 and *下划线***。
+
+使用两个波浪号 `~` 删除， ~~划掉~~。
+
+## 列表
+
+```markdown
+1. 第一个有序列表项
+   1. 另一个有序项
+
+* 无序子项
+
+1. 前面的数字是多少没关系，主要要是一个数字
+   1. 有序子项
+1. 又一个有序项
+
+   有时候需要一些文字与上面的列表项对齐，才能进行缩进
+
+* 无序列表可以使用星号
+
+- 也可以用减号
+
++ 也可以用加号
+```
+
+## 链接
+
+```markdown
+[行样式链接](https://hencter.top)
+
+[引用样式链接][MDN Web Docs]
+
+[可以将数字用于参考样式链接定义][1]
+
+或者将其留空直接链接[文本本身]
+
+使用 `<>` 包裹 URL 可以直接连接到该 URL。
+https://hencter.top or <https://hencter.top>。
+注意，你如果使用了 URL 做文本内容，请直接加上花括号，基于用户最好的阅读体验。
+(Hugo 中可以不用加，但是为了你文档的可移植性，请务必把它加上)
+
+一些文字表明，参考链接可以在以后跟随。
+
+[MDN Web Docs]: https://developer.mozilla.org/
+[1]: http://www.w3c.org/
+[文本本身]: http://hencter.top
 ```
 
 ## 段落
 
 要创建段落，请使用空白行将一行或多行文本进行分隔。
 
+```markdown
+这是一个段落
+
+新段落
+```
+
 ## 换行
 
 在一行的末尾添加 `>= 2` 的空格，然后按回车键,即可创建一个换行元素（标签）：`<br>`
 
-## 图片
+## 表情和图片
 
-我这里的渲染的图片通过 Hugo 的[渲染钩子](https://gohugo.io/templates/render-hooks/ "Markdown Render Hooks")做了修改，所以渲染的不仅仅是图片。
+表情
+
+- :smile:
+- :lying_face:
+
+表情使用参考：<https://www.webfx.com/tools/emoji-cheat-sheet/>
+
+```markdown
+
+行内样式: ![亦幸的头像](/img/avatar.jpg "亦幸的头像")
+
+引用样式: ![亦幸的头像][avatar]
 
 ![请检查网络状态](https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg "夕阳下的大象")
 
+[avatar]: /img/avatar.jpg "亦幸的头像"
+```
+
+行内样式: ![亦幸的头像](/img/avatar.jpg "亦幸的头像")
+
+引用样式: ![亦幸的头像][avatar]
+
+![请检查网络状态](https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg "夕阳下的大象")
+
+[avatar]: /img/avatar.jpg "亦幸的头像"
+
 ## 代码和语法高亮
 
-### 行内代码
+行内代码
 
 Inline `code` has `back-ticks around` it.
 
-### 行间代码
+代码块
 
 ```javascript
 var str = "JavaScript 语法高亮";
 console.log(str);
 ```
 
-```plain
+```txt
 纯文本是得不到任何的语法高亮的哦
 ```
 
@@ -93,10 +173,9 @@ console.log(str);
 
 冒号用来对齐
 
-| 默认左对齐 | 居中 | 右对齐 |
-| ---------- | ---- | ------ |
-| 内容       | 内容 | 内容   |
-|            |      |        |
+| 默认左对齐 |   居中   |     右对齐 |
+| ---------- | :------: | ---------: |
+| 左对齐内容 | 居中内容 | 右对齐内容 |
 
 用来区分表头的 `-` 至少三个
 
@@ -104,17 +183,15 @@ console.log(str);
 
 同样的你可以在单元格中是使用原生 Markdown 语法。
 
-| Markdown | Less   | Pretty   |
-| -------- | ------ | -------- |
-| _斜体_   | `代码` | **加粗** |
-| 1        | 2      | 3        |
+| Markdown |  Less  |  Pretty  |
+| :------: | :----: | :------: |
+|  *斜体*  | `代码` | **加粗** |
+|    1     |   2    |    3     |
 
 ## 水平线
 
-下面将展示三条水平线
-
+```markdown
 ---
 
----
-
----
+***
+```

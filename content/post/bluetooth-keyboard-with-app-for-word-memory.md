@@ -1,5 +1,5 @@
 ---
-title: 不背单词 实现键盘控制
+title: 不背单词实现键盘控制
 slug: bluetooth-keyboard-with-app-for-word-memory
 date: 2022-05-26T10:59:21.922Z
 publishDate: 2022-05-26T10:59:21.963Z

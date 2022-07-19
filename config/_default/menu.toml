@@ -1,9 +1,9 @@
-# [[main]]
-# identifier = 'index'
-# name = 'index'
-# title = '首页'
-# url = '/'
-# weight = -520
+[[main]]
+identifier = 'index'
+name = 'index'
+title = '首页'
+url = '/'
+weight = -520
 [[main]]
 identifier = 'post'
 name = 'post'

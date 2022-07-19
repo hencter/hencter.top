@@ -8,8 +8,8 @@
 
   /* Default (light) theme */
   --bg: #fff;
-  --accent-bg: #f5f7ff;
-  --text: #212121;
+  --accent-bg: white;
+  --text: #242424;
   --text-light: #585858;
   --border: #d8dae1;
   --accent: #0d47a1;
@@ -17,6 +17,10 @@
   --preformatted: #444;
   --marked: #ffdd33;
   --disabled: #efefef;
+  --shadow: darkgrey;
+
+  /* Default */
+  --max-width: 768px;
 }
 
 /* Dark theme */
@@ -24,7 +28,7 @@
   :root {
     color-scheme: dark;
     --bg: #212121;
-    --accent-bg: #2b2b2b;
+    --accent-bg: #242424;
     --text: #dcdcdc;
     --text-light: #ababab;
     --border: #666;
@@ -32,6 +36,7 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
+    --shadow: black;
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
@@ -41,7 +46,9 @@
 }
 
 /* Reset box-sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -65,38 +72,79 @@ html {
 body {
   color: var(--text);
   background: var(--bg);
-  font-size: 1.15rem;
   line-height: 1.5;
-  display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
-  margin: 0;
-}
-body > * {
-  grid-column: 2;
+  /* margin: 0; */
 }
 
 /* Make the header bg full width, but the content inline with body */
 body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
   background: var(--accent-bg);
   border-bottom: 1px solid var(--border);
-  text-align: center;
-  padding: 0 0.5rem 2rem 0.5rem;
-  grid-column: 1 / -1;
-}
-
-body > header h1 {
-  max-width: 1200px;
-  margin: 1rem auto;
+  box-shadow: 1px 1px 5px 1px var(--shadow);
 }
 
 body > header p {
-  max-width: 40rem;
   margin: 1rem auto;
+  max-width: 40rem;
+  text-align: center;
+}
+
+/* Format navigation */
+header > nav {
+  height: 3rem;
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Reduce logo */
+header > nav > :first-child {
+  border: none;
+  padding: 0;
+}
+header > nav > :first-child img{
+  width: 3rem;
+}
+
+/* Default reduce nav side */
+header > nav a {
+  border: none;
+  padding: 0;
+  line-height: 1;
+  margin: 0 0.5rem;
+}
+
+/* Use flexbox to allow items to wrap, as needed */
+header > nav ul,
+header > nav ol {
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* List items are inline elements, make them behave more like blocks */
+header > nav ul li,
+header > nav ol li {
+  display: inline-block;
 }
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
   padding-top: 1.5rem;
+  max-width: var(--max-width);
+  margin: 5rem auto;
 }
 
 body > footer {
@@ -136,34 +184,21 @@ h6 {
 }
 
 /* Prevent long strings from overflowing container */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 /* Fix line height when title wraps */
-h1,
-h2,
-h3 {
+h1{
   line-height: 1.1;
-}
-
-/* Reduce header size on mobile */
-@media only screen and (max-width: 720px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2.1rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-
-  h4 {
-    font-size: 1.25rem;
-  }
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
 }
 
 /* Format links & buttons */
@@ -235,61 +270,11 @@ label[type="button"]:hover {
   cursor: pointer;
 }
 
-/* Format navigation */
-header > nav {
-  font-size: 1rem;
-  line-height: 2;
-  padding: 1rem 0 0 0;
-}
-
-/* Use flexbox to allow items to wrap, as needed */
-header > nav ul,
-header > nav ol {
-  align-content: space-around;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* List items are inline elements, make them behave more like blocks */
-header > nav ul li,
-header > nav ol li {
-  display: inline-block;
-}
-
-header > nav a,
-header > nav a:visited {
-  margin: 0 0.5rem 1rem 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--text);
-  display: inline-block;
-  padding: 0.1rem 1rem;
-  text-decoration: none;
-}
-
-header > nav a:hover {
-  filter: brightness(1.4);
-  cursor: pointer;
-}
-
-/* Reduce nav side on mobile */
-@media only screen and (max-width: 720px) {
-  header > nav a {
-    border: none;
-    padding: 0;
-    text-decoration: underline;
-    line-height: 1;
-  }
-}
-
 /* Consolidate box styling */
-aside, details, pre, progress {
+/* aside, I need aside make layout */
+/* details, */
+pre,
+progress {
   background: var(--accent-bg);
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -298,22 +283,13 @@ aside, details, pre, progress {
 
 aside {
   font-size: 1rem;
-  width: 30%;
-  padding: 0 15px;
+  width: 40%;
   margin-left: 15px;
   float: right;
 }
 
-/* Make aside full-width on mobile */
-@media only screen and (max-width: 720px) {
-  aside {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-  }
-}
-
-article, fieldset {
+article,
+fieldset {
   border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 5px;
@@ -357,8 +333,9 @@ details[open] > :last-child {
 
 /* Format tables */
 table {
+  /* display: block; */
+  table-layout: auto;
   border-collapse: collapse;
-  display: block;
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;
@@ -463,15 +440,6 @@ input[type="radio"]:checked::after {
   font-size: 32px;
 }
 
-/* Makes input fields wider on smaller screens */
-@media only screen and (max-width: 720px) {
-  textarea,
-  select,
-  input {
-    width: 100%;
-  }
-}
-
 /* Ensures the checkbox and radio inputs do not have a set width like other input fields */
 input[type="checkbox"],
 input[type="radio"] {
@@ -481,7 +449,7 @@ input[type="radio"] {
 /* Set a height for color input */
 input[type="color"] {
   height: 2.5rem;
-  padding:  0.2rem;
+  padding: 0.2rem;
 }
 
 /* do not show border around file selector button */
@@ -504,6 +472,7 @@ mark {
 
 img,
 video {
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
   border-radius: 5px;
@@ -558,16 +527,8 @@ samp {
   color: var(--code);
 }
 
-kbd {
-  color: var(--preformatted);
-  border: 1px solid var(--preformatted);
-  border-bottom: 3px solid var(--preformatted);
-  border-radius: 5px;
-  padding: 0.1rem 0.4rem;
-}
-
 pre {
-  padding: 1rem 1.4rem;
+  padding: 0.5rem 1rem;
   max-width: 100%;
   overflow: auto;
   color: var(--preformatted);
@@ -579,6 +540,14 @@ pre code {
   background: none;
   margin: 0;
   padding: 0;
+}
+
+kbd {
+  color: var(--preformatted);
+  border: 1px solid var(--preformatted);
+  border-bottom: 3px solid var(--preformatted);
+  border-radius: 5px;
+  padding: 0.1rem 0.4rem;
 }
 
 /* Progress bars */
@@ -611,4 +580,51 @@ progress::-moz-progress-bar {
 
 progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
+}
+
+@media screen and (min-width: 959px) {
+  header > nav a,
+  header > nav a:visited {
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+
+  header > nav a:hover {
+    filter: brightness(1.4);
+    cursor: pointer;
+  }
+
+  aside {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+
+  /* Reduce header size on 960px width */
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  textarea,
+  select,
+  input {
+    width: 100%;
+  }
 }
