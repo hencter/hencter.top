@@ -103,11 +103,7 @@ header > nav {
   justify-content: space-between;
 }
 
-/* Reduce logo */
-header > nav > :first-child {
-  border: none;
-  padding: 0;
-}
+/* Reduce log img */
 header > nav > :first-child img{
   width: 3rem;
 }
@@ -166,29 +162,29 @@ aside {
 
 /* Format headers */
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   margin-top: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-top: 3rem;
 }
 
 h4 {
-  font-size: 1.44rem;
+  font-size: 1rem;
 }
 
 h5 {
-  font-size: 1.15rem;
+  font-size: .8rem;
 }
 
 h6 {
-  font-size: 0.96rem;
+  font-size: 0.6rem;
 }
 
 /* Prevent long strings from overflowing container */
@@ -585,6 +581,17 @@ progress:indeterminate::-moz-progress-bar {
 }
 
 @media screen and (min-width: 959px) {
+
+  header > nav > :first-child {
+    border: none;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  header > nav :last-child {
+    margin-right: 0;
+  }
+
   header > nav a,
   header > nav a:visited {
     border: 1px solid var(--border);
