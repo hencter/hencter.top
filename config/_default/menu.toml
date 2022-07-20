@@ -1,21 +1,24 @@
-[[main]]
-identifier = 'index'
-name = 'index'
-title = '首页'
-url = '/'
-weight = -520
+# [[main]]
+# identifier = 'index'
+# name = 'index'
+# title = '首页'
+# url = '/'
+# weight = -520
+
 [[main]]
 identifier = 'post'
 name = 'post'
 title = '文章'
 url = '/post'
 weight = -260
+
 [[main]]
 identifier = 'about'
 name = 'about'
 title = '关于'
 url = '/about'
 weight = -130
+
 # [[main]]
 # identifier = 'admin'
 # name = 'admin'

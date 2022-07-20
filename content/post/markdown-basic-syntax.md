@@ -110,6 +110,25 @@ https://hencter.top or <https://hencter.top>。
 [文本本身]: http://hencter.top
 ```
 
+[行样式链接](https://hencter.top)
+
+[引用样式链接][MDN Web Docs]
+
+[可以将数字用于参考样式链接定义][1]
+
+或者将其留空直接链接[文本本身]
+
+使用 `<>` 包裹 URL 可以直接连接到该 URL。
+https://hencter.top or <https://hencter.top>。
+注意，你如果使用了 URL 做文本内容，请直接加上花括号，基于用户最好的阅读体验。
+(Hugo 中可以不用加，但是为了你文档的可移植性，请务必把它加上)
+
+一些文字表明，参考链接可以在以后跟随。
+
+[MDN Web Docs]: https://developer.mozilla.org/
+[1]: http://www.w3c.org/
+[文本本身]: http://hencter.top
+
 ## 段落
 
 要创建段落，请使用空白行将一行或多行文本进行分隔。

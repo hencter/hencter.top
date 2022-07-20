@@ -1,6 +1,8 @@
 /* CSS 使用 @import 进行管理，力求减少自定义类的使用 */
 @import 'theme.css';
+/* 根元素 */
 @import 'root.css';
+/* 分区根元素 & 内容分区 */
 @import 'section.css';
 @import 'text.css';
 @import 'multimedia.css';
@@ -11,4 +13,4 @@
 @import 'forms.css';
 @import 'interactive.css';
 @import 'components.css';
-@import '@media.css';
+@import 'media.css';

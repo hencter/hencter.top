@@ -9,7 +9,7 @@ hasCJKLanguage = true
 
 enableEmoji = true
 
-# paginate = 10
+paginate = 3
 
 #  Creative Commons
 ## 普通图标

@@ -4,11 +4,5 @@ html {
   font-family: var(--sans-font);
   /* 用于锚记链接点击时的切换，IE 不支持 */
   scroll-behavior: smooth;
-}
-
-/* 分区根元素 */
-body {
-  color: var(--text);
   background: var(--bg);
-  line-height: 1.5;
 }
