@@ -1,0 +1,21 @@
+/* 全局变量 */
+:root {
+  /* 配置非衬线字体和等宽字体 */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  /* Default (light) theme */
+  --bg: #fff; /* 背景 */
+  --bg-accent: #ececec;/* 背景强调色 */
+  --text: #242424; /* 文本颜色 */
+  --text-accent: #0d47a1; /* 文本强调色 */
+  --border: #d8dae1; /* 边框颜色 */
+  --code: #d81b60; /* 代码 */
+  --shadow: darkgrey; /* 阴影颜色 */
+  --marked: #ffdd33; /* 标记强调 TODO */
+
+  /* 配置元素宽度变量 */
+  --main-width: 768px;
+}

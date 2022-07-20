@@ -1,16 +1,12 @@
 {{ $avatar := resources.Get "images/avatar.jpg" }}
 <header>
   <nav>
-    <a href="{{ .Site.BaseURL }}"><img src="{{ $avatar.RelPermalink }}"></a>
-    <ul>
-      {{ with .Site.Menus.main -}}
-      {{ range . -}}
-      <li>
-        <a href="{{ .URL | relURL }}">{{ .Title }}</a>
-      </li>
-      {{ end -}}
-      {{ end -}}
-    </ul>
+    <a href="{{ .Site.BaseURL }}">亦幸小站</a>
+    {{ with .Site.Menus.main -}}
+    {{ range . -}}
+    <a href="{{ .URL | relURL }}">{{ .Title }}</a>
+    {{ end -}}
+    {{ end -}}
     {{/* <a href="#" target="_blank">硬连接 1</a> */}}
     {{/* <a href="#" target="_blank">硬链接 2</a> */}}
     {{/* <input type="text" name="search"> */}}

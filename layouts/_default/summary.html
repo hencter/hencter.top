@@ -3,7 +3,7 @@
     <a href='{{ .Permalink }}'>
     <h2>{{ .Title }}</h2>
   </a>
-    <div class="post-meta">{{ .Date.Format " Mon Jan 2" }} - {{ .WordCount }} Words </div>
+  {{ .Date.Format " Mon Jan 2" }} - {{ .WordCount }} Words
   </header>
   {{ .Summary }}
 </article>

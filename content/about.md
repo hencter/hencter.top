@@ -21,4 +21,5 @@ title: 关于
 ~~我现在还没有想到一个比较好的方式来管理 CSS 所以暂时不做样式~~。
 
 1. [X] 目前已经完成站点的基本布局。
-2. [X] 基于 [simple.css](https://simplecss.org/) 魔改。
+2. [X] ~~基于 [simple.css](https://simplecss.org/) 魔改。~~
+3. [ ] 参考 [HTML 元素参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element "MDN Web Docs") 对站点的 CSS 重构，力求减少自定义类的使用。

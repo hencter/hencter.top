@@ -3,8 +3,8 @@ hugo -D
 hugo server -D \
             -w \
             # --debug \
-            # --noBuildLock \
-            # --disableFastRender \
+            --noBuildLock \
+            --disableFastRender \
             --printMemoryUsage \
             --printPathWarnings \
             --printUnusedTemplates
