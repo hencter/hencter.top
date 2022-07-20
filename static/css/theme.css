@@ -23,7 +23,7 @@
     /* 背景 */
     --bg: white;
     /* 背景强调 */
-    --bg-accent: slategray;
+    --bg-accent: ghostwhite;
     /* 文本 */
     --text: #333333;
     /* 文本强调色 */
@@ -57,5 +57,11 @@
     --code: deeppink;
     /* 阴影颜色 */
     --shadow: black;
+  }
+
+  /* 有些图片在暗色模式下太亮了，这里考虑减低透明度 */
+  img,
+  video {
+    opacity: 0.85;
   }
 }

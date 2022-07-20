@@ -3,10 +3,20 @@ blockquote {
   display: block;
 }
 
+div.highlight pre {
+  overflow: scroll;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* 内联文本语义 */
 a {
   color: var(--link);
 }
 a:hover {
   text-decoration: none;
+}
+
+code {
+  color: var(--code);
 }

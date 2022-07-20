@@ -1,7 +1,9 @@
 {{ $avatar := resources.Get "images/avatar.jpg" }}
 <header>
   <nav>
-    <a href="{{ .Site.BaseURL }}">亦幸小站</a>
+    <a href="{{ .Site.BaseURL }}">
+      <h1>亦幸小阁</h1>
+    </a>
     {{ with .Site.Menus.main -}}
     {{ range . -}}
     <a href="{{ .URL | relURL }}">{{ .Title }}</a>

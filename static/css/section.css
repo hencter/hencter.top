@@ -26,24 +26,26 @@ body > header > nav {
 body > header > nav a {
   text-decoration: none;
   margin: 0 5px;
-  padding: 0 5px;
+  padding: 5px;
   /* border: 1px solid var(--border); */
   border-radius: 5px;
   box-shadow: 0 2px 8px var(--shadow);
-
 }
+
 body > header > nav a:hover {
   filter: brightness(1.2);
   cursor: pointer;
 }
 
+body > header > nav > :first-child {
+  margin-left: 0;
+  box-shadow: none;
+  flex: auto;
+  align-self: center;
+}
+
 /* body > header > nav :last-child {
   margin-right: 0;
-} */
-
-/* body > header > nav > :first-child {
-  color: red;
-  flex: auto;
 } */
 
 main {
@@ -54,6 +56,7 @@ main {
 
 body > footer {
   background: var(--bg-accent);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 body > footer nav {
@@ -64,7 +67,7 @@ body > footer nav {
 
 article {
   /* border: 1px solid var(--border); */
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 5px;
   box-shadow: 0 2px 8px var(--shadow);
   padding: 10px;
