@@ -1,6 +1,16 @@
 {{ define "main" }}
 {{ .Content }}
-{{ range .Pages }}
-{{ .Render "summary" }}
+
+{{ range .Pages.GroupByDate "2006" }}
+<h3>{{ .Key }}</h3>
+<ul>
+    {{ range .Pages.ByTitle }}
+    <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}
+
 {{ end }}

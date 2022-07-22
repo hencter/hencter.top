@@ -1,8 +1,0 @@
-/* 主根元素 */
-html {
-  /* 全局字体 */
-  font-family: var(--sans-font);
-  /* 用于锚记链接点击时的切换，IE 不支持 */
-  scroll-behavior: smooth;
-  background: var(--bg);
-}
